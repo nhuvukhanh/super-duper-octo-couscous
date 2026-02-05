@@ -3,98 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <title>Giới thiệu bản thân</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             margin: 0;
-            background-color: #f4f6f8;
+            background: linear-gradient(120deg, #e0ecff, #fdfbfb);
         }
 
+        /* ===== HEADER ===== */
         header {
-            background-color: #2c7be5;
+            background: linear-gradient(135deg, #2c7be5, #6ea8fe);
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 40px 20px;
+            animation: slideDown 1s ease;
         }
 
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        /* ===== MAIN ===== */
         main {
-            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
         }
 
+        /* ===== CARD / KHUNG ===== */
         section {
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            animation: fadeUp 1s ease;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
         h2 {
             color: #2c7be5;
+            margin-bottom: 15px;
         }
 
+        img {
+            max-width: 200px;
+            border-radius: 12px;
+            display: block;
+            margin: 15px auto;
+        }
+
+        a {
+            color: #2c7be5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FORM ===== */
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #2c7be5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1a5fd0;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+        }
+
+        /* ===== ANIMATION ===== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- ĐẦU TRANG -->
-    <header>
-        <h1>Trang giới thiệu bản thân</h1>
-        <p>Xin chào! Mình là Vũ Khánh Như</p>
-    </header>
+<header>
+    <h1>Trang giới thiệu bản thân</h1>
+    <p>Xin chào! Mình là Vũ Khánh Như</p>
+</header>
 
-    <!-- THÂN TRANG -->
-    <main>
-        <section>
-            <h2>👤 Bản thân</h2>
-            <p>Họ và tên: Vũ Khánh Như</p>
-            <p>Tuổi: 17</p>
-            <p>Sở thích: Nghe nhạc, chơi thể thao</p>
-		<a href="https://postimg.cc/p5vYyR4w" target="_blank"><img src="https://i.postimg.cc/kG6j15cg/523759c2-c6a3-4d32-9677-04295dbb3ae0.jpg" alt="523759c2-c6a3-4d32-9677-04295dbb3ae0"></a><br><br>
-	<p>Xem thêm trang cá nhân của em:
-    <a href="https://www.instagram.com/vuphanes/" target="_blank">
-        Instagram
-    </a>
-</p>
-        </section>
+<main>
 
-        <section>
-            <h2>🏫 Trường học</h2>
-            <p>Trường: THPT Chuyên Hùng Vương</p>
-            <p>Địa chỉ: Phường Diên Hồng, Gia Lai</p>
-		<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/LXwd6wQ5/image.webp' border='0' alt='image'></a>
-	<p>Xem thêm trang của trường:
-<a href="https://thptchuyenhungvuong.gialai.edu.vn/" target="_blank">
-    Trang web trường
-</a>
-</p>
+    <section>
+        <h2>👤 Bản thân</h2>
+        <p>Họ và tên: Vũ Khánh Như</p>
+        <p>Tuổi: 17</p>
+        <p>Sở thích: Nghe nhạc, chơi thể thao</p>
 
-	</section>
+        <img src="https://i.postimg.cc/kG6j15cg/523759c2-c6a3-4d32-9677-04295dbb3ae0.jpg" alt="Ảnh cá nhân">
 
-        <section>
-            <h2>📚 Lớp học</h2>
-            <p>Lớp: 12C2A</p>
-            <p>Giáo viên chủ nhiệm: Cô Chu Thị Thanh Hoài</p>
-		<a href="https://ibb.co/r23HNvkq"><img src="https://i.ibb.co/9HhWSGnB/3625277854457562033.jpg" alt="3625277854457562033" border="0"></a>
-        </section>
+        <p>
+            Xem thêm:
+            <a href="https://www.instagram.com/vuphanes/" target="_blank">Instagram</a>
+        </p>
+    </section>
 
-        <section>
-            <h2>🎯 Câu lạc bộ</h2>
-            <p>Tên câu lạc bộ: Câu lạc bộ Ngủ</p>
-            <p>Vai trò: Thành viên</p>
-            <p>Hoạt động: Học ngủ đúng cách</p>
-        </section>
-    </main>
+    <section>
+        <h2>🏫 Trường học</h2>
+        <p>THPT Chuyên Hùng Vương</p>
+        <p>Gia Lai</p>
 
-    <!-- CHÂN TRANG -->
-    <footer>
-        <p>© 2026 - Trang giới thiệu cá nhân</p>
-    </footer>
+        <img src="https://i.postimg.cc/LXwd6wQ5/image.webp" alt="Trường học">
+
+        <a href="https://thptchuyenhungvuong.gialai.edu.vn/" target="_blank">
+            Trang web trường
+        </a>
+    </section>
+
+    <section>
+        <h2>📚 Lớp học</h2>
+        <p>Lớp: 12C2A</p>
+        <p>GVCN: Cô Chu Thị Thanh Hoài</p>
+
+        <img src="https://i.ibb.co/9HhWSGnB/3625277854457562033.jpg" alt="Lớp học">
+    </section>
+
+    <section>
+        <h2>🎯 Câu lạc bộ</h2>
+        <p>Câu lạc bộ Ngủ</p>
+        <p>Vai trò: Thành viên</p>
+        <p>Hoạt động: Học ngủ đúng cách 😴</p>
+    </section>
+
+    <!-- ===== FORM THU THẬP THÔNG TIN ===== -->
+    <section>
+        <h2>📝 Thông tin người ghé thăm</h2>
+
+        <form>
+            <input type="text" placeholder="Họ và tên" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Bạn đến từ đâu?">
+            <textarea rows="4" placeholder="Lời nhắn cho mình"></textarea>
+            <button type="submit">Gửi thông tin</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Trang giới thiệu cá nhân</p>
+</footer>
 
 </body>
 </html>
